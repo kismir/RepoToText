@@ -8,3 +8,5 @@ Instruction:
   - Rename it to 'exp' or change variable name in to_text.py to name of your folder you want to convert
   - run to_text.py
   - run from_text.py to get your folder structure back from text file
+
+(binary files are not allowed in directory)
