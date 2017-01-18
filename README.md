@@ -1,6 +1,6 @@
 # RepoToText
 
-This repository provides you to convert your bunch of files to plain text.
+This repository provides you ability to convert your bunch of files to plain text.
 Then you simply can cover your files back.
 
 Instruction:
