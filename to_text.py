@@ -29,7 +29,8 @@ for i in ml:
     srce_atom.append(i+'\n')
     srce_atom.append('**^**\n')
     for j in u:
-        srce_atom.append(j)
+        h=j.replace('\n','')
+        srce_atom.append(h+'\n')
     srce_atom.append('**^**\n')
 
 #### write plain text to source_base.txt in simple form
@@ -52,7 +53,7 @@ def rearrange(srce_atom):
     return new_srce_atom
 
 new_srce_atom=srce_atom
-for i in range(100):
+for i in range(83):
     new_srce_atom=rearrange(new_srce_atom)
 new_srce_atom=reversed(new_srce_atom)
 
@@ -60,5 +61,3 @@ file=open('source.txt','w')
 for i in new_srce_atom:
     file.write(i)
 file.close()
-    
-
