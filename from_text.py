@@ -18,7 +18,7 @@ y=file.readlines()
 file.close()
 
 y=list(reversed(y))
-for i in range(100):
+for i in range(83):
     y=dearrange(y)
 srce=y
 
@@ -29,12 +29,12 @@ for i in srce:
 #### split o variable and put result info to different folders
 o=o.split('**^**\n')
 for i in range(int((len(o)-1)/2)):
-    if not os.path.exists(os.path.dirname(o[i*2][:-1])):
+    if not os.path.exists(os.path.dirname(o[i*2].replace('\n',''))):
         try:
             os.makedirs(os.path.dirname(o[i*2][:-1]))
         except OSError as exc: # Guard against race condition
             if exc.errno != errno.EEXIST:
                 raise
-    f=open(o[i*2][:-1],'w')
+    f=open(o[i*2].replace('\n',''),'w')
     f.write(o[i*2+1][:-1])
-    f.close()
+f.close()
